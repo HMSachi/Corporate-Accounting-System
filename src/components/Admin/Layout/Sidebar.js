@@ -20,19 +20,19 @@ const Sidebar = () => {
     ];
 
     return (
-        <aside className="flex min-h-screen w-[250px] shrink-0 flex-col bg-gradient-to-b from-sky-600 via-blue-700 to-blue-950 p-4 text-xs text-blue-50 shadow-xl shadow-blue-950/20">
+        <aside className="flex min-h-screen w-[250px] shrink-0 flex-col border-r border-slate-200 bg-white p-4 text-xs text-slate-700 shadow-[0_0_18px_rgba(15,23,42,0.04)]">
             <div className="mb-2 flex min-h-10 items-center gap-2 px-2 font-bold">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white shadow-sm ring-1 ring-white/25">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-600 shadow-sm ring-1 ring-slate-200">
                     <AppIcon name="reports" className="h-4 w-4" />
                 </span>
-                <span>Corporate Accounting</span>
+                <span className="text-slate-900">Corporate Accounting</span>
             </div>
 
             <nav className="grid gap-1.5">
                 {sidebarItems.map((item) => (
                     <NavLink
                         className={({ isActive }) => `flex min-h-[30px] items-center gap-2 rounded-md px-2 text-left text-xs transition ${
-                            isActive ? "bg-white/20 text-white shadow-sm ring-1 ring-white/25" : "text-blue-50 hover:bg-white/10 hover:ring-1 hover:ring-white/10"
+                            isActive ? "bg-slate-100 text-slate-900 shadow-sm ring-1 ring-slate-200" : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                         }`}
                         key={item.path}
                         to={item.path}
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 ))}
             </nav>
 
-            <NavLink className="mt-auto flex min-h-[30px] items-center gap-2 rounded-md px-2 text-left text-xs text-blue-50 hover:bg-white/15" to="/login">
+            <NavLink className="mt-auto flex min-h-[30px] items-center gap-2 rounded-md px-2 text-left text-xs text-slate-600 hover:bg-slate-50 hover:text-slate-900" to="/login">
                 <AppIcon name="logout" className="h-3.5 w-3.5" />
                 Sign Out
             </NavLink>
