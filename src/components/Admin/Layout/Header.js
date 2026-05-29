@@ -1,10 +1,10 @@
 import React from "react";
-import AppIcon from "./AppIcon";
+import AppIcon from "../../AppIcon";
 
-const HeaderComponent = ({ user }) => {
+const Header = ({ user }) => {
     return (
         <header className="flex min-h-12 items-center gap-3 border-b border-slate-200 bg-white px-4 shadow-sm">
-            <button className="flex h-8 w-8 items-center justify-center rounded-md text-slate-600 hover:bg-slate-100">
+            <button className="flex h-8 w-8 items-center justify-center rounded-md text-slate-600 hover:bg-slate-100" type="button">
                 <AppIcon name="menu" />
             </button>
 
@@ -14,7 +14,7 @@ const HeaderComponent = ({ user }) => {
             </div>
 
             <div className="ml-auto hidden items-center gap-4 md:flex">
-                <button className="relative flex h-8 w-8 items-center justify-center rounded-md text-slate-600 hover:bg-slate-100">
+                <button className="relative flex h-8 w-8 items-center justify-center rounded-md text-slate-600 hover:bg-slate-100" type="button">
                     <AppIcon name="bell" />
                     <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
                 </button>
@@ -41,4 +41,4 @@ const HeaderComponent = ({ user }) => {
     );
 };
 
-export default HeaderComponent;
+export default Header;

@@ -1,5 +1,5 @@
-const GetLogin = async (loginData) => {
-    if (!loginData?.email || !loginData?.password) {
+const GetLogin = async (email, password) => {
+    if (!email || !password) {
         return Promise.reject(new Error('Email and password are required'));
     }
 
@@ -8,7 +8,7 @@ const GetLogin = async (loginData) => {
             id: 1,
             name: 'Admin User',
             role: 'Administrator',
-            email: loginData.email,
+            email,
         },
     });
 };

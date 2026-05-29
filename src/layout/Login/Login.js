@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { GetLogin } from "../../actions/LoginAction";
-import Home from "../Home/home";
 
 const Login = () => {
     const dispatch = useDispatch();
-    const { isLoading, error, isAuthenticated, user } = useSelector((state) => state.login);
+    const navigate = useNavigate();
+    const { isLoading, error } = useSelector((state) => state.login);
     const [formData, setFormData] = useState({
         email: "admin@corporate.com",
         password: "admin123",
@@ -21,12 +22,10 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(GetLogin(formData));
+        dispatch(GetLogin(formData.email, formData.password)).then(() => {
+            navigate("/admin/dashboard");
+        });
     };
-
-    if (isAuthenticated) {
-        return <Home user={user} />;
-    }
 
     return (
         <main className="flex min-h-screen items-center justify-center bg-slate-100 p-6 font-sans text-xs text-slate-800">
