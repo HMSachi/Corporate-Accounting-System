@@ -18,18 +18,18 @@ const QuickAccess = () => {
     ];
 
     return (
-        <section className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm">
+        <section className="rounded-lg border border-slate-200/80 bg-white/75 p-3 shadow-[0_1px_3px_rgba(15,23,42,0.06)] ring-1 ring-white">
             <h2 className="text-base font-bold text-slate-950">Quick Access</h2>
             <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
                 {quickAccess.map((item) => (
                     <button
-                        className="flex min-h-[56px] items-center gap-3 rounded-lg border border-slate-200 bg-white px-3 text-left text-xs font-bold shadow-sm hover:border-blue-300 hover:bg-blue-50"
+                        className="flex min-h-[52px] items-center gap-3 rounded-lg border border-slate-200/80 bg-white/70 px-3 text-left text-xs font-bold shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:border-sky-200 hover:bg-white hover:shadow-[0_6px_16px_rgba(14,116,144,0.08)]"
                         key={item.path}
                         onClick={() => navigate(item.path)}
                         type="button"
                     >
-                        <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white ${item.color}`}>
-                            <AppIcon name={item.icon} className="h-4 w-4" />
+                        <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white shadow-sm ${item.color}`}>
+                            <AppIcon name={item.icon} className="h-3.5 w-3.5" />
                         </span>
                         {item.label}
                     </button>
