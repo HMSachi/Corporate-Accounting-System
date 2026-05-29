@@ -12,9 +12,9 @@ const SummaryCards = () => {
     return (
         <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
             {summaryCards.map((card) => (
-                <article className="flex min-h-[76px] items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 shadow-sm" key={card.label}>
-                    <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white ${card.color}`}>
-                        <AppIcon name={card.icon} className="h-4 w-4" />
+                <article className="flex min-h-[76px] items-center gap-3 rounded-lg border border-slate-200/80 bg-white/80 p-3 shadow-[0_1px_3px_rgba(15,23,42,0.06)] ring-1 ring-white" key={card.label}>
+                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white shadow-sm ${card.color}`}>
+                        <AppIcon name={card.icon} className="h-3.5 w-3.5" />
                     </span>
                     <div>
                         <p className="text-xs font-bold text-slate-500">{card.label}</p>

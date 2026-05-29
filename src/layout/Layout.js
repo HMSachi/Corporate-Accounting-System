@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     const isAdminPath = location.pathname.startsWith("/admin");
 
     return (
-        <div className={`min-h-screen bg-slate-100 font-sans text-xs text-slate-800 ${isAdminPath ? "flex" : ""}`}>
+        <div className={`min-h-screen bg-[#f4f8fc] font-sans text-xs text-slate-800 ${isAdminPath ? "flex" : ""}`}>
             {!isLoginPage && isAdminPath && <Sidebar />}
 
             <div className="min-w-0 flex-1">
