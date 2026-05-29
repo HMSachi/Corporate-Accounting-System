@@ -3,7 +3,7 @@ import AppIcon from "../../AppIcon";
 
 const Header = ({ user }) => {
     return (
-        <header className="flex min-h-12 items-center gap-4 border-b border-blue-800/40 bg-gradient-to-r from-sky-600 via-blue-700 to-blue-950 px-4 text-white shadow-md shadow-blue-950/10">
+        <header className="flex min-h-12 items-center gap-4 border-b border-[#0a6fb8] bg-[#0b76c5] px-4 text-white shadow-md shadow-blue-950/10">
             <button className="flex h-8 w-8 items-center justify-center rounded-md text-white hover:bg-white/15" type="button">
                 <AppIcon name="menu" />
             </button>
