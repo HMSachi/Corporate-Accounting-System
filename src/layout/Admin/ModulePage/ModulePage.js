@@ -209,7 +209,7 @@ const ModulePage = ({ moduleKey }) => {
         <div className="space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                    <h1 className="text-2xl font-extrabold text-slate-950">{module.title}</h1>
+                    <h1 className="page-title">{module.title}</h1>
                     <p className="mt-1 text-xs text-slate-500">{module.description}</p>
                 </div>
                 <button className="flex h-8 items-center gap-2 rounded-md bg-blue-600 px-3 text-xs font-bold text-white shadow-sm hover:bg-blue-700" type="button">

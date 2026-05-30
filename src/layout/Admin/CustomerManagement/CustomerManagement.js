@@ -18,7 +18,7 @@ const CustomerManagement = () => {
         <div className="space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                    <h1 className="text-2xl font-bold text-slate-900">Customer Management</h1>
+                    <h1 className="page-title">Customer Management</h1>
                     <p className="mt-1 text-xs text-slate-500">Manage cooperative customers, balances, and account status.</p>
                 </div>
                 <button className="flex h-8 items-center gap-2 rounded-md bg-blue-600 px-3 text-xs font-bold text-white shadow-sm hover:bg-blue-700" type="button">
