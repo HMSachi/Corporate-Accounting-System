@@ -5,8 +5,8 @@ import SummaryCards from "../../../components/Admin/Dashboard/SummaryCards";
 
 const Dashboard = () => {
     return (
-        <div className="space-y-3">
-            <h1 className="text-2xl font-extrabold text-slate-900">Dashboard</h1>
+        <div className="space-y-5">
+            <h1 className="page-title">Dashboard</h1>
             <SummaryCards />
             <QuickAccess />
             <DashboardCharts />
