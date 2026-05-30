@@ -18,12 +18,12 @@ const QuickAccess = () => {
     ];
 
     return (
-        <section className="rounded-lg border border-slate-200 bg-white p-3 shadow-[0_1px_3px_rgba(15,23,42,0.04)] ring-1 ring-white">
-            <h2 className="text-base font-bold text-slate-950">Quick Access</h2>
-            <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
+        <section className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+            <h2 className="text-base font-normal text-slate-950">Quick Access</h2>
+            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
                 {quickAccess.map((item) => (
                     <button
-                        className="flex min-h-[64px] items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 text-left text-xs font-bold text-slate-800 shadow-[0_2px_8px_rgba(31,115,238,0.06)] transition hover:border-blue-200 hover:bg-blue-50/30 hover:shadow-[0_6px_16px_rgba(31,115,238,0.1)]"
+                        className="flex min-h-[64px] items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 text-left text-xs font-normal text-slate-800 shadow-sm transition hover:border-blue-200 hover:bg-blue-50/30"
                         key={item.path}
                         onClick={() => navigate(item.path)}
                         type="button"

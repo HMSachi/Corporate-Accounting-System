@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
 
             <div className="min-w-0 flex-1">
                 {!isLoginPage && isAdminPath && <Header user={user} />}
-                <main className={isAdminPath ? "bg-[#f8fafc] p-4" : ""}>
+                <main className={isAdminPath ? "bg-[#f8fafc] p-6" : ""}>
                     {children}
                 </main>
             </div>
