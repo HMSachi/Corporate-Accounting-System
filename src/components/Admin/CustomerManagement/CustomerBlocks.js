@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AppIcon from "../../AppIcon";
 
 const CustomerBlocks = () => {
+    const { t } = useTranslation();
     const blocks = [
         { label: "Active Customers", value: "1,185", icon: "customers", color: "bg-blue-500" },
         { label: "New This Month", value: "42", icon: "plus", color: "bg-emerald-500" },
@@ -17,7 +19,7 @@ const CustomerBlocks = () => {
                         <AppIcon name={block.icon} className="h-4 w-4" />
                     </span>
                     <div>
-                        <p className="text-xs font-normal text-slate-500">{block.label}</p>
+                        <p className="text-xs font-normal text-slate-500">{t(block.label)}</p>
                         <strong className="block text-lg font-normal text-slate-950">{block.value}</strong>
                     </div>
                 </article>

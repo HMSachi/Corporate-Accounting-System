@@ -1,7 +1,7 @@
 const adminModules = {
     "supplier-management": {
         title: "Supplier Management",
-        description: "Manage vendors, payment terms, purchase balances, and supplier documents.",
+        description: "Manage_suppliers_desc",
         action: "Add Supplier",
         icon: "suppliers",
         stats: [["Active Suppliers", "148", "bg-emerald-500"], ["Pending Orders", "32", "bg-amber-400"], ["Payable Balance", "Rs. 68,430", "bg-blue-500"], ["Overdue Bills", "9", "bg-rose-500"]],
@@ -10,7 +10,7 @@ const adminModules = {
     },
     accounts: {
         title: "Accounts",
-        description: "Review chart of accounts, account groups, opening balances, and account activity.",
+        description: "Manage_accounts_desc",
         action: "Create Account",
         icon: "accounts",
         stats: [["Asset Accounts", "24", "bg-blue-500"], ["Liability Accounts", "18", "bg-violet-500"], ["Income Accounts", "12", "bg-emerald-500"], ["Expense Accounts", "31", "bg-amber-400"]],
@@ -19,7 +19,7 @@ const adminModules = {
     },
     "accounts-payable": {
         title: "Accounts Payable",
-        description: "Track supplier invoices, approvals, payment schedules, and outstanding bills.",
+        description: "Manage_ap_desc",
         action: "New Bill",
         icon: "payable",
         stats: [["Open Bills", "46", "bg-blue-500"], ["Due This Week", "12", "bg-amber-400"], ["Paid This Month", "Rs. 41,250", "bg-emerald-500"], ["Overdue", "Rs. 7,980", "bg-rose-500"]],
@@ -28,7 +28,7 @@ const adminModules = {
     },
     "accounts-receivable": {
         title: "Accounts Receivable",
-        description: "Monitor customer invoices, collections, credit balances, and ageing schedules.",
+        description: "Manage_ar_desc",
         action: "New Invoice",
         icon: "receivable",
         stats: [["Open Invoices", "58", "bg-blue-500"], ["Due Today", "7", "bg-amber-400"], ["Collected", "Rs. 56,210", "bg-emerald-500"], ["Outstanding", "Rs. 23,780", "bg-rose-500"]],
@@ -37,7 +37,7 @@ const adminModules = {
     },
     "cash-management": {
         title: "Cash Management",
-        description: "Control cash inflows, outflows, bank accounts, transfers, and reconciliation.",
+        description: "Manage_cash_desc",
         action: "Record Cash Entry",
         icon: "cash",
         stats: [["Cash in Hand", "Rs. 18,500", "bg-blue-500"], ["Bank Balance", "Rs. 96,740", "bg-emerald-500"], ["Transfers", "14", "bg-violet-500"], ["Unreconciled", "6", "bg-amber-400"]],
@@ -46,7 +46,7 @@ const adminModules = {
     },
     "general-ledger": {
         title: "General Ledger (GL)",
-        description: "Review journal entries, posting status, ledgers, trial balance, and adjustments.",
+        description: "Manage_gl_desc",
         action: "New Journal",
         icon: "ledger",
         stats: [["Posted Entries", "286", "bg-blue-500"], ["Draft Journals", "11", "bg-amber-400"], ["Adjustments", "8", "bg-violet-500"], ["Period Balance", "Rs. 50,200", "bg-emerald-500"]],
@@ -55,7 +55,7 @@ const adminModules = {
     },
     reports: {
         title: "Reports",
-        description: "Generate financial statements, ageing summaries, audit exports, and management reports.",
+        description: "Manage_reports_desc",
         action: "Run Report",
         icon: "reports",
         stats: [["Saved Reports", "18", "bg-blue-500"], ["Scheduled", "6", "bg-emerald-500"], ["Exports", "42", "bg-violet-500"], ["Pending Review", "3", "bg-amber-400"]],
@@ -64,7 +64,7 @@ const adminModules = {
     },
     "user-management": {
         title: "User Management",
-        description: "Manage staff access, roles, approvals, branch permissions, and account security.",
+        description: "Manage_users_desc",
         action: "Add User",
         icon: "users",
         stats: [["Active Users", "36", "bg-blue-500"], ["Administrators", "5", "bg-violet-500"], ["Pending Invites", "4", "bg-amber-400"], ["Locked Accounts", "1", "bg-rose-500"]],
@@ -73,7 +73,7 @@ const adminModules = {
     },
     "audit-logs": {
         title: "Audit Logs",
-        description: "Track approvals, edits, user activity, voucher changes, and security events.",
+        description: "Manage_audit_desc",
         action: "Export Logs",
         icon: "audit",
         stats: [["Today Events", "124", "bg-blue-500"], ["Approvals", "18", "bg-emerald-500"], ["Warnings", "3", "bg-amber-400"], ["Critical", "0", "bg-rose-500"]],
@@ -82,7 +82,7 @@ const adminModules = {
     },
     settings: {
         title: "Settings",
-        description: "Configure company profile, fiscal periods, taxes, numbering, and notification rules.",
+        description: "Manage_settings_desc",
         action: "Save Settings",
         icon: "settings",
         stats: [["Fiscal Year", "2025", "bg-blue-500"], ["Tax Rules", "8", "bg-emerald-500"], ["Workflows", "6", "bg-violet-500"], ["Alerts", "12", "bg-amber-400"]],
@@ -91,7 +91,7 @@ const adminModules = {
     },
     "system-administration": {
         title: "System Administration",
-        description: "Maintain backups, integrations, system health, permissions, and operational controls.",
+        description: "Manage_sysadmin_desc",
         action: "System Check",
         icon: "admin",
         stats: [["System Health", "Good", "bg-emerald-500"], ["Backups", "Daily", "bg-blue-500"], ["Integrations", "4", "bg-violet-500"], ["Open Tasks", "5", "bg-amber-400"]],
