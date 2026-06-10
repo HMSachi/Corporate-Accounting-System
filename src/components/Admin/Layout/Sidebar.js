@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import AppIcon from "../../AppIcon";
 
 const Sidebar = () => {
+    const { t } = useTranslation();
     const sidebarItems = [
         { path: "/admin/dashboard", label: "Dashboard", icon: "dashboard" },
         { path: "/admin/customer-management", label: "Customer Management", icon: "customers" },
@@ -25,7 +27,7 @@ const Sidebar = () => {
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white shadow-sm ring-1 ring-white/25">
                     <AppIcon name="reports" className="h-4 w-4" />
                 </span>
-                <span className="text-white">Corporate Accounting</span>
+                <span className="text-white">{t("Corporate Accounting")}</span>
             </div>
 
             <nav className="grid gap-1.5">
@@ -38,14 +40,14 @@ const Sidebar = () => {
                         to={item.path}
                     >
                         <AppIcon name={item.icon} className="h-3.5 w-3.5 shrink-0" />
-                        <span className="truncate">{item.label}</span>
+                        <span className="truncate">{t(item.label)}</span>
                     </NavLink>
                 ))}
             </nav>
 
             <NavLink className="mt-auto flex min-h-[30px] items-center gap-2 rounded-md px-2 text-left text-xs text-blue-50 hover:bg-white/10 hover:text-white" to="/login">
                 <AppIcon name="logout" className="h-3.5 w-3.5" />
-                Sign Out
+                {t("Sign Out")}
             </NavLink>
         </aside>
     );

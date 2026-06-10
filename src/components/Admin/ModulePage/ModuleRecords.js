@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ModuleRecords = ({ module }) => {
+    const { t } = useTranslation();
     return (
         <article className="overflow-x-auto rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-            <h2 className="text-base font-normal text-slate-950">Recent Records</h2>
+            <h2 className="text-base font-normal text-slate-950">{t("Recent Records")}</h2>
             <table className="mt-2 w-full border-collapse text-xs">
                 <thead>
                     <tr className="text-left text-slate-500">
                         {module.columns.map((column) => (
-                            <th className="border-b border-slate-100 px-2 py-2" key={column}>{column}</th>
+                            <th className="border-b border-slate-100 px-2 py-2" key={column}>{t(column)}</th>
                         ))}
                     </tr>
                 </thead>

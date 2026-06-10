@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const DashboardCharts = () => {
+    const { t } = useTranslation();
     const transactions = [
         ["15 May 2025", "VCH-10045", "Sales Invoice", "Rs. 2,450.00"],
         ["15 May 2025", "VCH-10044", "Purchase Invoice", "Rs. 1,250.00"],
@@ -12,8 +14,8 @@ const DashboardCharts = () => {
         <section className="grid grid-cols-1 gap-4 xl:grid-cols-[1fr_1.35fr_1fr]">
             <article className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
                 <div className="flex items-center justify-between">
-                    <h2 className="text-base font-normal text-slate-950">Income vs Expense</h2>
-                    <button className="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs font-normal text-slate-600" type="button">This Month</button>
+                    <h2 className="text-base font-normal text-slate-950">{t("Income vs Expense")}</h2>
+                    <button className="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs font-normal text-slate-600" type="button">{t("This Month")}</button>
                 </div>
                 <div className="mt-3 flex h-36 items-end justify-between gap-3 border-b border-slate-200 px-2">
                     {[72, 84, 66, 78, 92].map((height) => (
@@ -27,8 +29,8 @@ const DashboardCharts = () => {
 
             <article className="overflow-x-auto rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
                 <div className="flex items-center justify-between">
-                    <h2 className="text-base font-normal text-slate-950">Recent Transactions</h2>
-                    <button className="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs font-normal text-slate-600" type="button">View All</button>
+                    <h2 className="text-base font-normal text-slate-950">{t("Recent Transactions")}</h2>
+                    <button className="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs font-normal text-slate-600" type="button">{t("View All")}</button>
                 </div>
                 <table className="mt-2 w-full border-collapse text-xs">
                     <thead>
@@ -55,7 +57,7 @@ const DashboardCharts = () => {
             </article>
 
             <article className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-                <h2 className="text-base font-normal text-slate-950">Top Expenses</h2>
+                <h2 className="text-base font-normal text-slate-950">{t("Top Expenses")}</h2>
                 <div className="mt-4 flex items-center gap-4">
                     <div className="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-[conic-gradient(#93c5fd_0_24%,#fca5a5_24%_46%,#fde68a_46%_60%,#86efac_60%_87%,#c4b5fd_87%_100%)]">
                         <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-center">
