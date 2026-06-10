@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import AppIcon from "../../AppIcon";
 
 const QuickAccess = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const quickAccess = [
         { path: "/admin/customer-management", label: "Customer Management", icon: "customers", color: "bg-[#3b82f6] text-white" },
@@ -19,7 +21,7 @@ const QuickAccess = () => {
 
     return (
         <section className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-            <h2 className="text-base font-normal text-slate-950">Quick Access</h2>
+            <h2 className="text-base font-normal text-slate-950">{t("Quick Access")}</h2>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
                 {quickAccess.map((item) => (
                     <button
@@ -31,7 +33,7 @@ const QuickAccess = () => {
                         <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full shadow-sm ${item.color}`}>
                             <AppIcon name={item.icon} className="h-4 w-4" />
                         </span>
-                        {item.label}
+                        {t(item.label)}
                     </button>
                 ))}
             </div>

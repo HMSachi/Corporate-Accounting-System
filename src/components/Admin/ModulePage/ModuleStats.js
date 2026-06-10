@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AppIcon from "../../AppIcon";
 
 const ModuleStats = ({ module }) => {
+    const { t } = useTranslation();
     return (
         <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
             {module.stats.map(([label, value, color]) => (
@@ -10,7 +12,7 @@ const ModuleStats = ({ module }) => {
                         <AppIcon name={module.icon} className="h-3.5 w-3.5" />
                     </span>
                     <div>
-                        <p className="text-xs font-normal text-slate-500">{label}</p>
+                        <p className="text-xs font-normal text-slate-500">{t(label)}</p>
                         <strong className="block text-lg font-normal text-slate-950">{value}</strong>
                     </div>
                 </article>
